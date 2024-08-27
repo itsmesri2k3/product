@@ -6,11 +6,13 @@
     <title>Product View</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: "Josefin Sans", sans-serif;
         }
 
         body {
@@ -21,10 +23,10 @@
         .product-container {
             display: flex;
             flex-wrap: wrap;
-            background-color: white;
+            background-color: gainsboro;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
             max-width: 1200px;
             margin: 0 auto;
             gap: 20px;
@@ -53,9 +55,18 @@
         }
 
         .product-price {
-            font-size: 1.5em;
-            color: #e67e22;
-            margin-bottom: 20px;
+                display: flex;
+                padding: 10px 15px;
+                margin-top: 20px;
+                border-radius: 10px;
+                justify-content: center;
+                color: #b5ff66;
+                width: auto;
+                display: inline-block;
+                background-color: gray;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                font-weight: 500;
+                font-size: 20px;
         }
 
         .product-description {
@@ -72,6 +83,7 @@
             margin-right: 10px;
             font-weight: bold;
             color: #555;
+            
         }
 
         .product-options select {
@@ -118,7 +130,6 @@
         }
 
         .add-to-cart-btn {
-            background-color: #e67e22;
             color: white;
             padding: 15px;
             font-size: 1.2em;
@@ -128,9 +139,7 @@
             transition: background-color 0.3s ease;
         }
 
-        .add-to-cart-btn:hover {
-            background-color: #d35400;
-        }
+       
         @media (max-width: 768px) {
             .product-container {
                 flex-direction: column;
@@ -149,32 +158,58 @@
                 font-size: 1.8em;
             }
 
-            .product-price {
-                font-size: 1.3em;
-            }
-
             .add-to-cart-btn {
                 font-size: 1em;
                 padding: 10px;
             }
+        }
+        .item-details {
+                display: flex;
+                padding: 10px;
+                margin-top: 20px;
+                border-radius: 10px;
+                justify-content: center;
+                color: #b5ff66;
+                width: auto;
+                display: inline-block;
+                background-color: gray;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                font-weight: 900;
+        }
+        #shop-btn {
+                color: #b5ff66;
+                background-color: #252525;
+                box-shadow: 0 0 10px rgba(0,0,0,0.3);
+                padding: 15px !important;
+                border-radius: 10px;
+                text-decoration-line: none;
+                font-size: 15px;
+                font-weight: 900;
+                cursor: pointer;
+        }
+        #shop-btn:hover {
+                color: #252525;
+                background-color: #b5ff66;
         }
     </style>
 </head>
 <body>
     <div class="product-container">
         <div class="product-image">
-			<img class="pic" src="img/product-1.jpg" alt="" width="260" height="260">   
+  
+  <img class="pic" src="img/product-1.jpg" alt="" width="260" height="260" style="box-shadow: 0 0 10px rgba(0,0,0,0.3);">   
         </div>
         <div class="product-details">
             <h1 class="product-title">NIKE</h1>
             <div class="product-description">
-				<h2>Nike-Air Max Golf Pro</h2><br>
-				<h3>Men/Women</h3><br>
-				<p class="product-price">₹1299</p><p>82% OFF</p>
+				<h2>Nike-Air Max Golf Pro</h2>
+				<h3 class="item-details">Men/Women</h3><br><br>
+				<p>82% OFF</p><p class="product-price">₹1299</p><br><br><p>Include all Tax + GST</p>
             </div>
             <div class="product-options">
                 <label for="size">Size</label>
-                <select id="size" name="size">
+            
+                <select id="size" name="size" style="background-color: #f9f9f9;">
                     <option value="s">Small</option>
                     <option value="m">Medium</option>
                     <option value="l">Large</option>
@@ -206,7 +241,7 @@
                 <label for="card-cvc">CVC:</label>
                 <input type="text" id="card-cvc" name="card-cvc" placeholder="Enter CVC">
             </div>
-            <button class="add-to-cart-btn">BUY</button>
+            <button class="add-to-cart-btn" id="shop-btn">BUY</button>
         </div>
     </div>
 <script>
