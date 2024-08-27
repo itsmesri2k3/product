@@ -27,13 +27,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 1200px;
             margin: 0 auto;
-			gap: 15px;
+            gap: 20px;
         }
 
         .product-image {
 			height: 260px;
 			width: 260px;
-            margin: 15px;
         }
 
         .product-image img {
@@ -135,6 +134,10 @@
         @media (max-width: 768px) {
             .product-container {
                 flex-direction: column;
+                display: flex; 
+                justify-content: center; 
+                align-items: center;
+                gap: 0px;
             }
 
             .product-image {
